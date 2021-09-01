@@ -176,6 +176,10 @@ class Viewer:
             glPopAttrib()
 
         glutSwapBuffers()
+    
+    def destroy(self):
+        glutDestroyWindow(self.window)
+        sys.exit()
 
     # The function called whenever a key is pressed.
     # Note the use of Python tuples to pass in: (key, x, y)
